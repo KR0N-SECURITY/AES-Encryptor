@@ -25,3 +25,6 @@ Console.WriteLine("Encrypted Data: " + Convert.ToBase64String(encryptedData));
 Console.WriteLine("Decrypted Data: " + decryptedData);
 Console.WriteLine("RNG Key: " + Convert.ToBase64String(key));
 
+// Press any key to close this CMD
+Console.ReadLine();
+
