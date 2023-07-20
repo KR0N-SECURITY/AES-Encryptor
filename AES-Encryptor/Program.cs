@@ -3,12 +3,20 @@ using AES_Encryptor.Encrypt;
 using System.Security.Cryptography;
 using System.Text;
 
-// Data to Encrypt
-string originalData = "Hello world! I'm a Decrypted Text";
+// Read user input for originalData
+Console.Write("Enter the text to encrypt: ");
+string? originalData = Console.ReadLine();
 
-// Using RNG (Random Number Generator) to generate a random key
+// Check if input is null or empty
+if (string.IsNullOrEmpty(originalData))
+{
+    Console.WriteLine("No text provided. Please enter valid text to encrypt.");
+    return;
+}
+
+// Using RandomNumberGenerator to generate a random key
 byte[] key = new byte[16];
-using (var rng = new RNGCryptoServiceProvider())
+using (var rng = RandomNumberGenerator.Create())
 {
     rng.GetBytes(key);
 }
@@ -27,4 +35,3 @@ Console.WriteLine("RNG Key: " + Convert.ToBase64String(key));
 
 // Press any key to close this CMD
 Console.ReadLine();
-
