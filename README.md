@@ -58,9 +58,15 @@ This AES Encryption Console Project is designed to provide a simple and secure w
 
    ```bash
    git clone https://github.com/KR0N-SECURITY/AES-Encryptor.git
-   cd AES-Encryptor
+   ```
 
-2. Build the project:   
+2. After this, go to the destination folder:
+
+   ```bash
+   cd AES-Encryptor
+   ```
+
+3. Build the project:   
    ```bash
    dotnet build
    ```
