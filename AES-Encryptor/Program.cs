@@ -10,8 +10,7 @@ string? originalData = Console.ReadLine();
 // Check if input is null or empty
 if (string.IsNullOrEmpty(originalData))
 {
-    Console.WriteLine("No text provided. Please enter valid text to encrypt.");
-    return;
+    throw new ArgumentNullException(nameof(originalData), "No text provided. Please enter valid text to encrypt.");
 }
 
 // Using RandomNumberGenerator to generate a random key
